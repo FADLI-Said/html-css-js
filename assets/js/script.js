@@ -1,6 +1,7 @@
 document.getElementById("liveButton").addEventListener("click", function() {
     let texte = document.getElementById("text").value
     document.getElementById("liveText").innerText = texte
+    document.getElementById("liveText").removeAttribute("class")
 })
 
 // document.getElementById("blueText").addEventListener("click", function () {
@@ -27,20 +28,20 @@ document.getElementById("liveButton").addEventListener("click", function() {
 //     blue.classList.add("text-danger")
 // })
 
-function updateClass(className) {
+function changeTextColor(className) {
     let textcolor = document.getElementById("liveText")
     textcolor.removeAttribute("class")
     textcolor.classList.add(className)
 }
 
 document.getElementById("blueText").addEventListener("click", function () {
-    updateClass("text-primary")
+    changeTextColor("text-primary")
 })
 
 document.getElementById("greenText").addEventListener("click", function () {
-    updateClass("text-success")
+    changeTextColor("text-success")
 })
 
 document.getElementById("redText").addEventListener("click", function () {
-    updateClass("text-danger")
+    changeTextColor("text-danger")
 })
